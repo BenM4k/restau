@@ -1,0 +1,29 @@
+@import '../../index.scss';
+
+.footer-container {
+    @include flex($justify: space-between);
+    padding: 2rem 10rem;
+    background: $primary-color;
+    color: $white-color;
+    font-family: $font-fam-primary;
+
+    div {
+        @include flex($direction: column);
+        line-height: 2rem;
+        font-size: 1.1rem;
+
+        ul {
+            @include flex;
+            gap: 20px;
+            padding: .5rem 0;
+
+            li {
+                a {
+                    color: $white-color;
+                    line-height: 2rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
