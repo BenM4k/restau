@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Members = () => {
-    return (
-        <div>Members</div>
-    )
-}
+const Members = () => (
+  <div>Members</div>
+);
 
-export default Members
+export default Members;

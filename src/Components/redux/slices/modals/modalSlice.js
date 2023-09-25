@@ -1,20 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const modalSlice = createSlice({
-    name: 'modal',
-    initialState: {
-        orderModal: false,
-        reserveModal: false,
+  name: 'modal',
+  initialState: {
+    orderModal: false,
+    reserveModal: false,
+  },
+  reducers: {
+    toggleOrder: (state) => {
+      state.orderModal = !state.orderModal;
     },
-    reducers: {
-        toggleOrder: (state) => {
-            state.orderModal = !state.orderModal;
-        },
-        toggleReserve: (state) => {
-            state.reserveModal = !state.reserveModal;
-        },
-    }
-})
+    toggleReserve: (state) => {
+      state.reserveModal = !state.reserveModal;
+    },
+  },
+});
 
 export const { toggleOrder, toggleReserve } = modalSlice.actions;
 

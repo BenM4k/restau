@@ -1,14 +1,15 @@
 @import '../../index.scss';
 
 .loader-container {
-    width: 100%;
-    height: 100vh;
-    @include flex;
+  width: 100%;
+  height: 100vh;
 
-    div {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: $primary-color;
-    }
+  @include flex;
+
+  div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $primary-color;
+  }
 }

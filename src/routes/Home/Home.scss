@@ -1,332 +1,353 @@
 @import '../../index.scss';
 
 .home-container {
-    font-family: $font-fam-primary;
-    color: $black-color;
+  font-family: $font-fam-primary;
+  color: $black-color;
 
-    section {
-        min-height: 80vh;
-    }
+  section {
+    min-height: 80vh;
+  }
 
-    h2 {
-        @include header(2rem)
-    }
+  h2 {
+    @include header(2rem);
+  }
 
-    .widgets {
-        position: fixed;
-        top: 50vh;
-        right: 20px;
-        @include flex($direction: column-reverse);
-        gap: 10px;
-        z-index: 1;
-    }
+  .widgets {
+    position: fixed;
+    top: 50vh;
+    right: 20px;
 
-    .order-modal {
-        position: fixed;
-        z-index: 2;
+    @include flex($direction: column-reverse);
 
-        .backdrop {
-            .order-modal-container {
-                height: 300px;
-                width: 500px;
-                @include white-bg;
-                margin: 40vh auto;
-                padding: 1rem;
-                @include flex($direction: column);
-                position: relative;
+    gap: 10px;
+    z-index: 1;
+  }
 
-                .close {
-                    position: absolute;
-                    right: 10px;
-                    top: 10px;
-                }
+  .order-modal {
+    position: fixed;
+    z-index: 2;
 
-                h2 {
-                    margin-bottom: auto;
-                }
+    .backdrop {
+      .order-modal-container {
+        height: 300px;
+        width: 500px;
 
-                form {
-                    flex: 1;
-                    width: 90%;
-                    @include flex($direction: column);
-                    gap: 15px;
-                    font-size: 1.25rem;
-                    line-height: 1rem;
+        @include white-bg;
 
-                    label {
-                        text-align: start;
-                    }
+        margin: 40vh auto;
+        padding: 1rem;
 
-                    input {
-                        padding: .5rem;
-                        width: 100%;
-                        border: 2px solid $primary-color;
-                        border-radius: 5px;
-                    }
-                }
-            }
-        }
-    }
-
-    .banner {
-        height: 70vh;
-        padding: 7rem 5rem;
-        @include flex;
-        gap: 20px;
-
-        .banner-desc {
-            padding: 2rem;
-            flex: 0.5;
-            @include white-bg;
-            @include flex($direction: column, $align: flex-start);
-            gap: 10px;
-        }
-    }
-
-    .about-us {
-        padding: 5rem;
         @include flex($direction: column);
-        background-color: $gray-color;
-        color: $black-color;
 
-        .about-desc {
-            @include flex;
-            gap: 20px;
+        position: relative;
 
-            p {
-                flex: 0.5;
-            }
-
-            img {
-                height: 390px;
-                width: 390px;
-            }
+        .close {
+          position: absolute;
+          right: 10px;
+          top: 10px;
         }
-    }
-
-    .dishes {
-        @include flex($direction: column);
-        gap: 20px;
-        padding: 5rem 0;
-
-        .dish-category {
-            h3 {
-                text-align: center
-            }
-
-            ul {
-                margin: 10px 0;
-                @include flex;
-                gap: 10px;
-
-                button {
-                    padding: 7px;
-                    font-weight: 500;
-                }
-            }
-        }
-
-        .dish-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 30px;
-
-            li {
-                @include white-bg;
-                // background-color: $gray-color;
-                overflow: hidden;
-
-                .dish-footer {
-                    @include flex($direction: column);
-                    background-color: $primary-color;
-                    color: white;
-                    padding: .7rem;
-                    gap: 5px;
-
-                    button {
-                        border: none;
-                        background: none;
-                        text-decoration: underline;
-                        color: $white-color;
-                    }
-                }
-            }
-
-            img {
-                height: 180px;
-                width: 200px;
-            }
-        }
-
-        .dish-display {
-            @include flex;
-            gap: 20px;
-            padding: 3rem 0;
-
-            .dish-details {
-                @include white-bg;
-                @include flex($direction: column, $align: flex-start);
-                gap: 10px;
-                min-height: 200px;
-                max-width: 690px;
-                padding: 20px;
-            }
-
-            img {
-                height: 190px;
-                width: 200px;
-            }
-        }
-
-        .no-display {
-            display: none;
-        }
-    }
-
-    .why-us {
-        padding: 5rem;
-        @include flex($direction: column);
-        gap: 100px;
-        background-color: $gray-color;
-        color: $black-color;
-
-        .service {
-            @include flex;
-            gap: 30px;
-
-            li {
-                // @include white-bg;
-                padding: 2rem;
-                @include flex($direction: column);
-                // gap: 20px;
-                height: 300px;
-                width: 260px;
-                overflow: hidden;
-
-                svg {
-                    font-size: 3rem;
-                    color: $black-color
-                }
-
-                h3 {
-                    padding: 15px;
-                }
-
-                .line {
-                    height: 10px;
-                    width: 35px;
-                    background-color: $secondary-color;
-                }
-
-                p {
-                    flex: 1;
-                    padding-top: 15px;
-                    text-align: center;
-                }
-
-            }
-        }
-    }
-
-    .testimonials {
-        margin: 6rem auto;
-        flex-direction: column;
-        gap: 30px;
 
         h2 {
-            padding-bottom: 100px;
+          margin-bottom: auto;
         }
 
-        .app__testimonial-item {
-            background-color: #ffffff;
-            min-height: 320px;
-            max-width: 950px;
-            display: flex;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        form {
+          flex: 1;
+          width: 90%;
 
-            transition: all 0.3s ease-in-out;
+          @include flex($direction: column);
 
-            img {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
+          gap: 15px;
+          font-size: 1.25rem;
+          line-height: 1rem;
 
-            @media screen and (min-width: 2000px) {
-                min-height: 450px;
+          label {
+            text-align: start;
+          }
 
-                img {
-                    width: 150px;
-                    height: 150px;
-                }
-            }
-
-            @media screen and (max-width: 850px) {
-                width: 100%;
-            }
-
-            @media screen and (max-width: 600px) {
-                flex-direction: column;
-            }
+          input {
+            padding: 0.5rem;
+            width: 100%;
+            border: 2px solid $primary-color;
+            border-radius: 5px;
+          }
         }
-
-        .app__testimonial-content {
-            flex: 1;
-            height: 100%;
-            padding: 0 2rem;
-            text-align: left;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: space-around;
-
-            p {
-                font-size: 1.25rem;
-                line-height: 2rem;
-            }
-
-            h4 {
-                font-weight: 600;
-                color: $primary-color;
-                margin-top: 2rem;
-            }
-
-            h5 {
-                font-weight: 400;
-                color: #6b7688;
-                margin-top: 5px;
-            }
-
-        }
-
-        .app__testimonial-btns {
-            margin-top: 1rem;
-            gap: 20px;
-
-            div {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                transition: all 0.3s ease-in-out;
-                overflow: hidden;
-                background-color: #ffffff;
-
-                svg {
-                    color: $primary-color;
-
-                }
-
-                &:hover {
-                    background-color: $primary-color;
-
-                    svg {
-                        color: #ffffff;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
+
+  .banner {
+    height: 70vh;
+    padding: 7rem 5rem;
+
+    @include flex;
+
+    gap: 20px;
+
+    .banner-desc {
+      padding: 2rem;
+      flex: 0.5;
+
+      @include white-bg;
+      @include flex($direction: column, $align: flex-start);
+
+      gap: 10px;
+    }
+  }
+
+  .about-us {
+    padding: 5rem;
+
+    @include flex($direction: column);
+
+    background-color: $gray-color;
+    color: $black-color;
+
+    .about-desc {
+      @include flex;
+
+      gap: 20px;
+
+      p {
+        flex: 0.5;
+      }
+
+      img {
+        height: 390px;
+        width: 390px;
+      }
+    }
+  }
+
+  .dishes {
+    @include flex($direction: column);
+
+    gap: 20px;
+    padding: 5rem 0;
+
+    .dish-category {
+      h3 {
+        text-align: center;
+      }
+
+      ul {
+        margin: 10px 0;
+
+        @include flex;
+
+        gap: 10px;
+
+        button {
+          padding: 7px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .dish-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 30px;
+
+      li {
+        @include white-bg;
+        // background-color: $gray-color;
+        overflow: hidden;
+
+        .dish-footer {
+          @include flex($direction: column);
+
+          background-color: $primary-color;
+          color: white;
+          padding: 0.7rem;
+          gap: 5px;
+
+          button {
+            border: none;
+            background: none;
+            text-decoration: underline;
+            color: $white-color;
+          }
+        }
+      }
+
+      img {
+        height: 180px;
+        width: 200px;
+      }
+    }
+
+    .dish-display {
+      @include flex;
+
+      gap: 20px;
+      padding: 3rem 0;
+
+      .dish-details {
+        @include white-bg;
+        @include flex($direction: column, $align: flex-start);
+
+        gap: 10px;
+        min-height: 200px;
+        max-width: 690px;
+        padding: 20px;
+      }
+
+      img {
+        height: 190px;
+        width: 200px;
+      }
+    }
+
+    .no-display {
+      display: none;
+    }
+  }
+
+  .why-us {
+    padding: 5rem;
+
+    @include flex($direction: column);
+
+    gap: 100px;
+    background-color: $gray-color;
+    color: $black-color;
+
+    .service {
+      @include flex;
+
+      gap: 30px;
+
+      li {
+        // @include white-bg;
+        padding: 2rem;
+
+        @include flex($direction: column);
+        // gap: 20px;
+        height: 300px;
+        width: 260px;
+        overflow: hidden;
+
+        svg {
+          font-size: 3rem;
+          color: $black-color;
+        }
+
+        h3 {
+          padding: 15px;
+        }
+
+        .line {
+          height: 10px;
+          width: 35px;
+          background-color: $secondary-color;
+        }
+
+        p {
+          flex: 1;
+          padding-top: 15px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    margin: 6rem auto;
+    flex-direction: column;
+    gap: 30px;
+
+    h2 {
+      padding-bottom: 100px;
+    }
+
+    .app__testimonial-item {
+      background-color: #fff;
+      min-height: 320px;
+      max-width: 950px;
+      display: flex;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      @media screen and (min-width: 2000px) {
+        min-height: 450px;
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+    }
+
+    .app__testimonial-content {
+      flex: 1;
+      height: 100%;
+      padding: 0 2rem;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-around;
+
+      p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+
+      h4 {
+        font-weight: 600;
+        color: $primary-color;
+        margin-top: 2rem;
+      }
+
+      h5 {
+        font-weight: 400;
+        color: #6b7688;
+        margin-top: 5px;
+      }
+    }
+
+    .app__testimonial-btns {
+      margin-top: 1rem;
+      gap: 20px;
+
+      div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        background-color: #fff;
+
+        svg {
+          color: $primary-color;
+        }
+
+        &:hover {
+          background-color: $primary-color;
+
+          svg {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
