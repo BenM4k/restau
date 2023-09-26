@@ -18,8 +18,8 @@ const OrderModal = () => {
   };
   const dispatch = useDispatch();
   const { meals } = useSelector((state) => state.dishes);
-  const [name, setName] = useState('');
-  const [dish, setDish] = useState('');
+  const [name, setName] = useState(() => '');
+  const [dish, setDish] = useState(() => '');
   const order = {
     name,
     dish,

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -33,12 +33,16 @@ const Home = () => {
   const banner = useSelector((store) => store.banner);
   const { gallery, mainImg } = useSelector((store) => store.gallery);
   const { orderModal, reserveModal } = useSelector((store) => store.modal);
-  const [currentDish, setCurrentDish] = useState(null);
-  const [currentCat, setCurrentCat] = useState('All');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const filteredDishes = dishes.filter((dish) => dish.cat.includes(currentCat));
-  const test = testimonials[currentIndex];
-  const meal = filteredDishes[currentDish];
+
+  const [currentDish, setCurrentDish] = useState(() => null);
+  const [currentCat, setCurrentCat] = useState(() => 'All');
+  const [currentIndex, setCurrentIndex] = useState(() => 0);
+
+  const filteredDishes = useMemo(() => dishes.filter((dish) => dish.cat.includes(currentCat)),
+    [currentCat]);
+  const test = useMemo(() => testimonials[currentIndex], [currentIndex]);
+  const meal = useMemo(() => filteredDishes[currentDish], [currentDish]);
+
   const handleCatDisplay = (cat) => {
     setCurrentCat(cat);
     setCurrentDish(null);

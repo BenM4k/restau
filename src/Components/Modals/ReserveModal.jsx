@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { makeReservation } from '../redux/slices/orders/orderSlice';
 import { toggleReserve } from '../redux/slices/modals/modalSlice';
@@ -17,8 +17,9 @@ const ReserveModal = () => {
     },
   };
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
-  const [type, setType] = useState('');
+  const { reservationTypes } = useSelector((store) => store.dishes);
+  const [name, setName] = useState(() => '');
+  const [type, setType] = useState(() => '');
   const reserve = {
     name,
     reserveTime: 'some time',
@@ -53,12 +54,12 @@ const ReserveModal = () => {
             <br />
             <input id="customer_name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
           </label>
-          <label htmlFor="type">
-            Type
-            <br />
-            <br />
-            <input id="type" type="text" value={type} onChange={(e) => setType(e.target.value)} />
-          </label>
+          <select name="select" id="select" onChange={(e) => setType(e.target.value)}>
+            <option value="Default">Choose a reservation</option>
+            {reservationTypes.map((type) => (
+              <option value={type.name} key={type.id}>{type.name}</option>
+            ))}
+          </select>
           <button type="submit" className="btn-primary">Reserve</button>
         </form>
       </motion.div>

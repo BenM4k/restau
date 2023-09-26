@@ -79,6 +79,36 @@ const dishSlice = createSlice({
       },
     ],
     categories: ['All', 'Meat', 'Dessert', 'Drinks', 'Greens', 'Exotic'],
+    reservationTypes: [
+      {
+        id: uuid(),
+        name: 'Reservation type 1',
+      },
+      {
+        id: uuid(),
+        name: 'Reservation type 2',
+      },
+      {
+        id: uuid(),
+        name: 'Reservation type 3',
+      },
+      {
+        id: uuid(),
+        name: 'Reservation type 4',
+      },
+      {
+        id: uuid(),
+        name: 'Reservation type 5',
+      },
+      {
+        id: uuid(),
+        name: 'Reservation type 6',
+      },
+      {
+        id: uuid(),
+        name: 'Reservation type 7',
+      },
+    ],
   },
   reducers: [],
 });
