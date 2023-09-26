@@ -7,11 +7,11 @@ import { BsInstagram, BsLinkedin } from 'react-icons/bs';
 const Footer = () => (
   <div className="footer-container">
     <div className="copyright">
-      <span>Copyright 2023 Benny Makomo</span>
+      <p className="">Copyright 2023 Benny Makomo</p>
     </div>
 
     <div className="useful-links">
-      <h3>Useful Links</h3>
+      <h3 className="p-text1">Useful Links</h3>
       <ul>
         <li><NavLink to="">Privacy policy</NavLink></li>
         <li><NavLink to="">Shipping policy</NavLink></li>
@@ -21,7 +21,7 @@ const Footer = () => (
     </div>
 
     <div className="partners">
-      <h3>Partners</h3>
+      <h3 className="p-text1">Partners</h3>
       <ul>
         <li>Amazon</li>
         <li>Meta</li>
@@ -30,7 +30,7 @@ const Footer = () => (
     </div>
 
     <div className="socials">
-      <h3>Socials</h3>
+      <h3 className="p-text1">Socials</h3>
       <ul className="">
         <li><NavLink to="https://www.github.com/BenM4k"><AiOutlineGithub /></NavLink></li>
         <li><NavLink to="https://www.twitter.com/_____anomaly"><AiOutlineTwitter /></NavLink></li>

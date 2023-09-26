@@ -16,10 +16,16 @@ $font-fam-primary: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxy
   border: none;
   background-color: $bg;
   color: $text;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
-  font-weight: bold;
   cursor: pointer;
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 1.5;
+  
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
 }
 
 .btn-primary {
@@ -62,9 +68,41 @@ button:hover {
 }
 
 //texts
+
+.p-text1 {
+  font-size: 0.8rem;
+  text-align: left;
+  color: $black-color;
+  line-height: 1.5;
+  
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+
 .p-text {
-  line-height: 2rem;
-  font-size: 1.25rem;
+  @extend .p-text1;
+  color: $white-color;
+}
+
+.head-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: $black-color;
+  text-transform: capitalize;
+
+  span {
+    color: $secondary-color;
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
 }
 
 //other mixins
@@ -92,6 +130,11 @@ button:hover {
   @include flex;
 }
 
+.app_center {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -101,6 +144,20 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 3;
 }
+
+.copyright {
+  padding: 1rem 0 0;
+  font-size: 0.4rem;
+
+  @include flex;
+
+  p {
+    text-transform: uppercase;
+    color: $white-color;
+  }
+}
+
+// App
 
 * {
   box-sizing: border-box;
