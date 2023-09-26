@@ -9,6 +9,19 @@ import { toggleOrder, toggleReserve } from '../../Components/redux/slices/modals
 
 import './Home.scss';
 
+const welcomeVariants = {
+  start: { x: '-100vw' },
+  end: {
+    x: '0',
+    transition: {
+      type: 'spring',
+      delay: 0.5,
+      duration: 0.8,
+      ease: 'easeInOut',
+    },
+  },
+};
+
 const Home = () => {
   const dispatch = useDispatch();
   const {
@@ -63,11 +76,16 @@ const Home = () => {
         <button type="button" className=" btn-primary" onClick={handleOrder}>Order Now</button>
       </div>
       <section className="banner app_flex">
-        <div className="banner-desc white-bg">
+        <motion.div
+          className="banner-desc white-bg"
+          variants={welcomeVariants}
+          initial="start"
+          animate="end"
+        >
           <h1 className="main-header head-text">{bannerHeader}</h1>
           <p className="p-text1">{bannerDesc}</p>
           <button type="button" className="btn-primary" onClick={handleOrder}>Order Now</button>
-        </div>
+        </motion.div>
         <div className="banner-img">
           <img src={banner[0].image} alt="banner" />
         </div>

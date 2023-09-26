@@ -23,7 +23,26 @@
 
   ul {
     @include flex;
+
     gap: 24px;
     text-transform: uppercase;
-  }
+
+    li {
+      position: relative;
+
+      .admin {
+        @include white-bg;
+        gap: 10px;
+        padding: 1rem;
+        position: absolute;
+        display: none;
+      }
+      
+      &:hover {
+        .admin{
+          @include flex;
+        }
+      }
+    }
+    }
 }

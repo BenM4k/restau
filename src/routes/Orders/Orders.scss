@@ -1,0 +1,34 @@
+@import '../../index.scss';
+
+.orders-container {
+    height: 69vh;
+    max-width: 1080px;
+    margin: 6rem auto;
+    font-family: $font-fam-primary;
+
+    .orders-list {
+        @include flex($direction: column);
+        padding: 32px;
+        height: 600px;
+        overflow: scroll;
+        gap: 16px;
+
+        li {
+            @include flex;
+            @include white-bg;
+            width: 100%;
+            padding: 1rem;
+            gap: 32px;
+            
+            h3 {
+                font-size: 1rem;
+                width: 40%;
+            }
+            
+            p {
+                font-size: 1rem;
+                flex: 1;
+            }
+        }
+    }
+}

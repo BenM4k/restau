@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+.contact-container {
+    height: 88.2vh;
+    padding: 6.2rem 0;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    font-family: $font-fam-primary;
+    @include flex;
+}

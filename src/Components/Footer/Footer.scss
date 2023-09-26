@@ -29,9 +29,12 @@
 
       li {
         @extend .p-text1;
+
         color: $white-color;
+
         a {
           @extend .p-text1;
+
           color: $white-color;
         }
       }

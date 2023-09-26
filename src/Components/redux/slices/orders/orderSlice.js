@@ -6,6 +6,7 @@ const orderSlice = createSlice({
   initialState: {
     ordersState: [{
       name: 'Customer',
+      dish: 'Dish X',
       time: Date.now(),
     }],
     reserveState: [
@@ -13,7 +14,7 @@ const orderSlice = createSlice({
         id: uuid(),
         name: 'Customer',
         reservedTime: 'some time',
-        type: '',
+        type: 'Lunch',
       },
     ],
   },
@@ -21,6 +22,7 @@ const orderSlice = createSlice({
     makeOrder: (state, action) => {
       const newItem = {
         name: action.payload.name,
+        dish: action.payload.dish,
         time: Date.now(),
       };
       state.ordersState = [...state.ordersState, newItem];

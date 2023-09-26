@@ -17,6 +17,13 @@ const Navbar = () => {
       </div>
 
       <ul>
+        <li>
+          Admin
+          <div className="admin">
+            <NavLink to="/orders">Orders</NavLink>
+            <NavLink to="/reservation">Reservartion</NavLink>
+          </div>
+        </li>
         {navList.map((link) => (
           <li key={link.name}>
             {link.name.includes('About') || link.name.includes('Services')
