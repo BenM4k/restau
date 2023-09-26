@@ -1,12 +1,19 @@
 @import '../../index.scss';
 
 .footer-container {
-  @include flex($justify: space-between);
+  @include flex;
 
+  gap: 48px;
   padding: 2rem 10rem;
   background: $primary-color;
   color: $white-color;
   font-family: $font-fam-primary;
+
+  h3 {
+    color: $white-color;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
   div {
     @include flex($direction: column);
@@ -21,10 +28,14 @@
       padding: 0.5rem 0;
 
       li {
+        @extend .p-text1;
+
+        color: $white-color;
+
         a {
+          @extend .p-text1;
+
           color: $white-color;
-          line-height: 2rem;
-          font-size: 1.2rem;
         }
       }
     }

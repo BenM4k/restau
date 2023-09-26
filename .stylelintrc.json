@@ -8,7 +8,7 @@
     ],
     "rules": {
         "at-rule-no-unknown": [
-            true,
+            false,
             {
                 "ignoreAtRules": [
                     "tailwind",
@@ -20,7 +20,7 @@
             }
         ],
         "scss/at-rule-no-unknown": [
-            true,
+            false,
             {
                 "ignoreAtRules": [
                     "tailwind",

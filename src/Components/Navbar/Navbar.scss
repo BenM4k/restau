@@ -1,20 +1,18 @@
 @import '../../index.scss';
 
 .nav-container {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 0;
   left: 0;
-  padding: 1.5rem 5rem;
+  padding: 24px 128px;
+  z-index: 1;
 
   @include blur-bg;
   @include flex($justify: space-between);
 
   color: $black-color;
   font-family: $font-fam-primary;
-  // font-weight: bold;
-  line-height: 2rem;
-  font-size: 1.25rem;
 
   a {
     color: $black-color;
@@ -27,6 +25,26 @@
   ul {
     @include flex;
 
-    gap: 35px;
+    gap: 24px;
+    text-transform: uppercase;
+
+    li {
+      position: relative;
+
+      .admin {
+        @include white-bg;
+
+        gap: 10px;
+        padding: 1rem;
+        position: absolute;
+        display: none;
+      }
+
+      &:hover {
+        .admin {
+          @include flex;
+        }
+      }
+    }
   }
 }
