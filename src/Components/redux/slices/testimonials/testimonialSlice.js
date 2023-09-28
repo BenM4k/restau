@@ -9,6 +9,7 @@ const testimonialSlice = createSlice({
     {
       id: uuid(),
       img: photo,
+      blurhash: '',
       feedback: 'blablabla Laudantium? Pulvinar impedit molestiae bibendum totam aliquip sit aliquid nunchacks',
       name: 'Ben',
       company: 'self',
@@ -16,6 +17,7 @@ const testimonialSlice = createSlice({
     {
       id: uuid(),
       img: photo1,
+      blurhash: '',
       feedback: 'Rem vel rem augue. Aliquid nisi senectus consequatur ducimus maiores sociis',
       name: 'Random',
       company: 'Company',

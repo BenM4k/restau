@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 const Reservations = () => {
   const { reserveState: reservations } = useSelector((store) => store.order);
+
   return (
     <div className="orders-container">
       <h2 className="head-text">Reservations</h2>

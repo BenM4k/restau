@@ -2,10 +2,11 @@ import { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OrderModal from '../../Components/Modals/OrderModal';
 import ReserveModal from '../../Components/Modals/ReserveModal';
 import { toggleOrder, toggleReserve } from '../../Components/redux/slices/modals/modalSlice';
+import BlurHashImg from '../../Components/BlurHashImg';
 
 import './Home.scss';
 
@@ -91,7 +92,8 @@ const Home = () => {
           <button type="button" className="btn-primary" onClick={handleOrder}>Order Now</button>
         </motion.div>
         <div className="banner-img">
-          <img src={banner[0].image} alt="banner" />
+          {/* <img src={banner[0].image} alt="banner" /> */}
+          <BlurHashImg image={banner[0].image} hash={banner[0].blurhash} alt="banner-image" />
         </div>
       </section>
 
@@ -137,7 +139,8 @@ const Home = () => {
             <li
               key={dish.id}
             >
-              <img src={dish.pic} alt="" loading="lazy" />
+              <BlurHashImg image={dish.pic} hash={dish.blurhash} alt={dish.name} />
+              {/* <img src={dish.pic} alt="" loading="lazy" /> */}
               <motion.div
                 className="dish-footer"
                 whileHover={{ opacity: [0, 1] }}
@@ -171,7 +174,7 @@ const Home = () => {
           <ul className="service">
             {service?.length ? service.map((serv) => (
               <li key={serv?.id}>
-                <FontAwesomeIcon icon={serv?.icon} />
+                {/* <FontAwesomeIcon icon={serv?.icon} /> */}
                 <h3>{serv?.title}</h3>
                 <div className="line" />
                 <p className="p-text1">{serv?.desc}</p>

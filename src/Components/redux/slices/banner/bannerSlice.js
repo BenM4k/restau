@@ -7,6 +7,7 @@ const bannerSlice = createSlice({
   initialState: [
     {
       image: photo,
+      blurhash: 'LJKKf=TJBq?H~CWBJ7xuAH$P00JR',
       id: uuid(),
     },
   ],
