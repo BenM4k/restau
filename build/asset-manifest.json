@@ -1,22 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.233f97e3.css",
-    "main.js": "/static/js/main.2c0f5acd.js",
-    "static/css/54.d75cd8ca.chunk.css": "/static/css/54.d75cd8ca.chunk.css",
-    "static/js/54.0e175ce4.chunk.js": "/static/js/54.0e175ce4.chunk.js",
-    "static/js/928.c6ba0dfd.chunk.js": "/static/js/928.c6ba0dfd.chunk.js",
+    "main.css": "/static/css/main.dee59183.css",
+    "main.js": "/static/js/main.995a990e.js",
     "static/media/dish1.jpg": "/static/media/dish1.a1cc57592bacde9f6a07.jpg",
-    "static/media/gallery1.jpg": "/static/media/gallery1.7224e1ace07da8b82f8e.jpg",
-    "static/media/banner.png": "/static/media/banner.149958fe07c90a16f911.png",
+    "static/media/dish6.jpg": "/static/media/dish6.93c84ec53024354b96d3.jpg",
+    "static/media/dish2.jpg": "/static/media/dish2.13e77fefb84441fee29a.jpg",
+    "static/media/dish7.jpg": "/static/media/dish7.10d4400ab4afa1ed174c.jpg",
+    "static/media/dish4.jpg": "/static/media/dish4.7606709e64acd43e4638.jpg",
+    "static/media/dish8.jpg": "/static/media/dish8.234416b484bce48d6367.jpg",
+    "static/media/gallery3.jpg": "/static/media/gallery3.252e584bc5c283b9c3f3.jpg",
+    "static/media/me.png": "/static/media/me.d71b34f53bf88ab35a19.png",
+    "static/media/dish5.jpg": "/static/media/dish5.2f47d4ba0b24548d2c01.jpg",
+    "static/media/banner2.png": "/static/media/banner2.fdced79281544a3e938e.png",
+    "static/media/Default_A_single_playing_card_Plain_honest_stark_Ultra_realist_3_e5f9c475-d3c0-4b0c-b01e-6ba416f32f02_0.png": "/static/media/Default_A_single_playing_card_Plain_honest_stark_Ultra_realist_3_e5f9c475-d3c0-4b0c-b01e-6ba416f32f02_0.0cb3e1bb55d7283f66fd.png",
+    "static/media/gallery9.jpg": "/static/media/gallery9.c01af5870f50f725316e.jpg",
+    "static/media/dish3.jpg": "/static/media/dish3.d662b17ca3071970308e.jpg",
+    "static/media/gallery5.jpg": "/static/media/gallery5.5babc7581540fa73cad2.jpg",
+    "static/media/gallery7.jpg": "/static/media/gallery7.aebf237e7267e63dd5fd.jpg",
+    "static/media/gallery4.jpg": "/static/media/gallery4.8a4a4f3156a2dc9e9481.jpg",
+    "static/media/gallery6.jpg": "/static/media/gallery6.9259905d2a2c43f37fcf.jpg",
     "index.html": "/index.html",
-    "main.233f97e3.css.map": "/static/css/main.233f97e3.css.map",
-    "main.2c0f5acd.js.map": "/static/js/main.2c0f5acd.js.map",
-    "54.d75cd8ca.chunk.css.map": "/static/css/54.d75cd8ca.chunk.css.map",
-    "54.0e175ce4.chunk.js.map": "/static/js/54.0e175ce4.chunk.js.map",
-    "928.c6ba0dfd.chunk.js.map": "/static/js/928.c6ba0dfd.chunk.js.map"
+    "main.dee59183.css.map": "/static/css/main.dee59183.css.map",
+    "main.995a990e.js.map": "/static/js/main.995a990e.js.map"
   },
   "entrypoints": [
-    "static/css/main.233f97e3.css",
-    "static/js/main.2c0f5acd.js"
+    "static/css/main.dee59183.css",
+    "static/js/main.995a990e.js"
   ]
 }

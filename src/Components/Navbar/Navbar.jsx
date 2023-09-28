@@ -29,7 +29,7 @@ const Navbar = () => {
             {link.name.includes('About') || link.name.includes('Services')
               ? (
                 <>
-                  <a href={`http://localhost:3000/#${link.name.toLowerCase()}`}>{link.name}</a>
+                  <a href={`/#${link.name.toLowerCase()}`}>{link.name}</a>
                 </>
               )
               : <></>}
