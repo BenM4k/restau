@@ -32,7 +32,7 @@ const App = () => {
       </Suspense>
     </>
   );
-}
+};
 // const dispatch = useDispatch();
 
 // useEffect(() => {
